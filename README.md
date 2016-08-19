@@ -1,5 +1,3 @@
 # memo
-## github.io
-[ページ](https://TashiroMercy.github.io)
-
-
+***
+### [github.io](https://TashiroMercy.github.io)

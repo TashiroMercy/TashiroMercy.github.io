@@ -86,7 +86,21 @@
   ```
   ![sample](image/sample.png)
 
+1. Inline HTML
+  Markdownで表現できない書式はHTMLタグを使えば表現できる。
+  ```HTML
+  <Font color="red">red</font>
+  ```
+  <Font color="red">red</font>
+
 1. Table
+  ```MarkDown
+  |左寄せ|中 央|右寄せ|
+  |:--|:--:|--:|
+  |1-1|1-2|1-3|
+  |2-1|2-2|2-3|
+  |3-1|3-2|3-3|
+  ```
 
 |左寄せ|中 央|右寄せ|
 |:--|:--:|--:|

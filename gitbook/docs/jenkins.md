@@ -5,8 +5,9 @@ Vargrantを使用した手順
 ```Java
 config.vm.box = "wgarcia/centos65-jenkins"
 ```
+
 * Vagrantfile 変更箇所（コメント解除）
-```Spinx
+```
 config.vm.network "private_network", ip: "192.168.33.15"
 config.vm.provider "virtualbox" do |vb|
   # Display the VirtualBox GUI when booting the machine

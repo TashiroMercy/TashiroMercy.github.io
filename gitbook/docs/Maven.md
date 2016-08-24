@@ -60,5 +60,7 @@
     ![12](image/12.png)
     「Spring Boot Web Starter」に依存関係があるライブラリが追加されている
 
+  ****
+
 <img src="https://raw.github.com/github/media/master/octocats/octocat.png"
      alt="Github mascot Octcat" title="Octcat" width="200" height="200" />

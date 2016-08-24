@@ -6,6 +6,7 @@
 #  + [third](gitbook/docs/third.md)
   + [jenkinsインストール](gitbook/docs/jenkins.md)
   + [jenkins設定](gitbook/docs/jenkins_setting.md)
+  + [jenkins（Maven）](gitbook/docs/jenkins_maven.md)
   + [gitbook](gitbook/docs/gitbook.md)
   + [MarkDown](gitbook/docs/MarkDown.md)
   + [Maven](gitbook/docs/Maven.md)

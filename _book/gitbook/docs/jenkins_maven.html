@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>jenkins（Maven） · GitBook</title>
+        <title>jenkinsジョブ設定 · GitBook</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -147,7 +147,7 @@
                 <a href="jenkins_maven.html">
             
                     
-                    jenkins（Maven）
+                    jenkinsジョブ設定
             
                 </a>
             
@@ -229,7 +229,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >jenkins（Maven）</a>
+        <a href="../.." >jenkinsジョブ設定</a>
     </h1>
 </div>
 
@@ -259,6 +259,21 @@
 <img alt="gradle_build2" src="image/gradle_build2.png">
 Tasks&#x306B;&#x5BFE;&#x8C61;&#x306E;Gradle&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3068;&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x6307;&#x5B9A;</p></li>
 <li><p>&#x30D3;&#x30EB;&#x30C9;&#x5F8C;&#x306E;&#x51E6;&#x7406;</p><p>war&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x4FDD;&#x7BA1;&#x3059;&#x308B;</p></li></ol>
+<hr><h3 id="war&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x8EE2;&#x9001;">war&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x8EE2;&#x9001;</h3><ol><li><p>&#x65B0;&#x898F;&#x30B8;&#x30E7;&#x30D6;&#x4F5C;&#x6210;</p><p>&#x30B8;&#x30E7;&#x30D6;&#x540D;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x300C;&#x30D5;&#x30EA;&#x30FC;&#x30B9;&#x30BF;&#x30A4;&#x30EB;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30D3;&#x30EB;&#x30C9;&#x300D;&#x3092;&#x9078;&#x629E;</p></li>
+<li><p>&#x30D3;&#x30EB;&#x30C9;</p><p>&#x30D3;&#x30EB;&#x30C9;&#x624B;&#x9806;&#x306E;&#x8FFD;&#x52A0;&#x3067;&#x300C;&#x4ED6;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x304B;&#x3089;&#x6210;&#x679C;&#x7269;&#x3092;&#x30B3;&#x30D4;&#x30FC;&#x300D;&#x3092;&#x9078;&#x629E;
+<img alt="send_war" src="image/send_war.png">
+&#x300C;&#x4ED6;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x304B;&#x3089;&#x6210;&#x679C;&#x7269;&#x3092;&#x30B3;&#x30D4;&#x30FC;&#x300D;&#x306F;&#x300C;Copy Artifact Plugin&#x300D;&#x9069;&#x7528;&#x3067;&#x5229;&#x7528;&#x53EF;&#x80FD;&#x3068;&#x306A;&#x308B;</p></li>
+<li><p>&#x30D3;&#x30EB;&#x30C9;&#x5F8C;&#x306E;&#x51E6;&#x7406;</p><p>&#x30D3;&#x30EB;&#x30C9;&#x5F8C;&#x306E;&#x51E6;&#x7406;&#x306E;&#x8FFD;&#x52A0;&#x3067;&#x300C;&#x6210;&#x679C;&#x7269;&#x3092;SCP&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x516C;&#x958B;&#x300D;&#x3092;&#x9078;&#x629E;
+<img alt="send_war2" src="image/send_war2.png">
+&#x300C;&#x6210;&#x679C;&#x7269;&#x3092;SCP&#x30EA;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x516C;&#x958B;&#x300D;&#x306F;&#x300C;Hudson SCP publisher plugin&#x300D;&#x9069;&#x7528;&#x3067;&#x5229;&#x7528;&#x53EF;&#x80FD;&#x3068;&#x306A;&#x308B;</p></li></ol>
+<hr><h3 id="&#x30C7;&#x30D5;&#x30ED;&#x30A4;">&#x30C7;&#x30D5;&#x30ED;&#x30A4;</h3><ol><li><p>&#x65B0;&#x898F;&#x30B8;&#x30E7;&#x30D6;&#x4F5C;&#x6210;</p><p>&#x30B8;&#x30E7;&#x30D6;&#x540D;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x300C;&#x30D5;&#x30EA;&#x30FC;&#x30B9;&#x30BF;&#x30A4;&#x30EB;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30D3;&#x30EB;&#x30C9;&#x300D;&#x3092;&#x9078;&#x629E;</p></li>
+<li><p>&#x30D3;&#x30EB;&#x30C9;</p><p>&#x30D3;&#x30EB;&#x30C9;&#x624B;&#x9806;&#x306E;&#x8FFD;&#x52A0;&#x3067;&#x300C;&#x30B7;&#x30A7;&#x30EB;&#x306E;&#x5B9F;&#x884C;&#x300D;&#x3092;&#x9078;&#x629E;</p><pre><code>// &#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x505C;&#x6B62;
+sudo service tomcat stop</code></pre>
+<pre><code>// war&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30B3;&#x30D4;&#x30FC;
+sudo cp -f /home/jenkins/work/XXX.war /home/nepios/bin/apache-tomcat-8.0.32/webapps</code></pre>
+<pre><code>// &#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x8D77;&#x52D5;
+sudo service tomcat start</code></pre>
+</li></ol>
 
                                 
                                 </section>
@@ -302,7 +317,7 @@ Tasks&#x306B;&#x5BFE;&#x8C61;&#x306E;Gradle&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"jenkins（Maven）","level":"1.2.3","depth":2,"next":{"title":"gitbook","level":"1.2.4","depth":2,"path":"gitbook/docs/gitbook.md","ref":"gitbook/docs/gitbook.md","articles":[]},"previous":{"title":"jenkins設定","level":"1.2.2","depth":2,"path":"gitbook/docs/jenkins_setting.md","ref":"gitbook/docs/jenkins_setting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook/docs/jenkins_maven.md","mtime":"2016-08-24T09:02:27.113Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-24T09:09:38.051Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"jenkinsジョブ設定","level":"1.2.3","depth":2,"next":{"title":"gitbook","level":"1.2.4","depth":2,"path":"gitbook/docs/gitbook.md","ref":"gitbook/docs/gitbook.md","articles":[]},"previous":{"title":"jenkins設定","level":"1.2.2","depth":2,"path":"gitbook/docs/jenkins_setting.md","ref":"gitbook/docs/jenkins_setting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook/docs/jenkins_maven.md","mtime":"2016-08-25T06:09:27.478Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-25T06:17:40.937Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -310,6 +325,10 @@ Tasks&#x306B;&#x5BFE;&#x8C61;&#x306E;Gradle&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30
         
     <script src="../gitbook.js"></script>
     <script src="../theme.js"></script>
+    
+        
+        <script src="../gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook-plugin-search/search-engine.js"></script>

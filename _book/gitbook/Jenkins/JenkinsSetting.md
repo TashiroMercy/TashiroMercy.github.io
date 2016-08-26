@@ -1,19 +1,21 @@
 # Jenkins設定メモ
 ****
-* Mavenでojdbcを使用する場合
-  センターリポジトリにjarを公開していない為、ローカル環境にダウンロードしなければ行けない。
+### Mavenでのojdbc設定
+
+Mavenでojdbcを使用する場合、
+センターリポジトリにjarを公開していない為、ローカル環境にダウンロードしなければ行けない。
 
   1. ojdbc7.jarをダウンロード
   1. ftp転送(home/vagrant)
   1. home/jenkinsディレクトリ作成
   1. ojdbc7.jarをhome/jenkinsにコピー
-  ```
-  cp /home/vagrant/ojdbc7.jar /home/jenkins
-  ```
+    ```
+    cp /home/vagrant/ojdbc7.jar /home/jenkins
+    ```
   1. ojdbc7.jarの所有者をjenkinsに変更
-  ```
-  chown -R jenkins. /home/jenkins
-  ```
+    ```
+    chown -R jenkins. /home/jenkins
+    ```
   1. masterにJAVA_HOMEを設定
     * javaパスの確認
     ```
@@ -33,8 +35,7 @@
     ![ビルド](../image/maven_ojdbc.png "ビルド")
 
 ****
-* gitを使用する場合
-
+### gitインストール
   ```
   yum install git
   ```

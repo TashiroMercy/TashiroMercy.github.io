@@ -59,12 +59,17 @@
     ![send_war2](../image/send_war2.png)
     「成果物をSCPリポジトリに公開」は「Hudson SCP publisher plugin」適用で利用可能となる
 
+    ※送信先はjenkinsユーザで参照可能なディレクトリを設定
+
 ****
-### デフロイ
+### デプロイ
 
   1. 新規ジョブ作成
 
     ジョブ名を入力して「フリースタイルプロジェクトのビルド」を選択
+
+  1. General
+    実行するノードを制限
 
   1. ビルド
 
@@ -82,3 +87,30 @@
     // サービス起動
     sudo service tomcat start
     ```
+****
+### パイプライン
+
+1. Pipeline
+  実行するノードを制限
+
+  ```Groovy
+    node {
+      builds()
+    }
+
+    def builds() {
+        stage 'タイトル１'
+        run 'ジョブ１'
+        stage 'タイトル２'
+        run 'ジョブ２'
+    }
+
+    def run(name) {
+        try {
+            build name
+        } catch (e) {
+            echo "job error : ${name}"
+            throw e
+        }
+    }
+  ```

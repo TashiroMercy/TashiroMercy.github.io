@@ -1,5 +1,5 @@
 # Jenkins設定メモ
-
+****
 * Mavenでojdbcを使用する場合
   センターリポジトリにjarを公開していない為、ローカル環境にダウンロードしなければ行けない。
 
@@ -31,3 +31,10 @@
     install:install-file -Dfile=/home/jenkins/ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0.2 -Dpackaging=jar -DgeneratePom=true
     ```
     ![ビルド](image/maven_ojdbc.png "ビルド")
+
+****
+* gitを使用する場合
+
+  ```
+  yum install git
+  ```

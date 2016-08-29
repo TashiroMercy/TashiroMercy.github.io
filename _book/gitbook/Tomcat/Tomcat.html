@@ -264,40 +264,48 @@
 mkdir bin</code></pre>
 <ol><li><p>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x79FB;&#x52D5;</p><pre><code>cp /home/vagrant/jdk-8u101-linux-x64.tar.gz  /home/tomcat/
 cp /home/vagrant/apache-tomcat-8.5.4.tar.gz /home/tomcat/</code></pre>
-<ol><li><p>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x89E3;&#x51CD;</p><pre><code>tar zxf /home/tomcat/apache-tomcat-8.5.4.tar.gz -C /home/tomcat/bin
+</li>
+<li><p>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x89E3;&#x51CD;</p><pre><code>tar zxf /home/tomcat/apache-tomcat-8.5.4.tar.gz -C /home/tomcat/bin
 tar zxf /home/tomcat/jdk-8u101-linux-x64.tar.gz -C /home/tomcat/bin</code></pre>
 </li>
 <li><p>&#x30AA;&#x30FC;&#x30CA;&#x30FC;&#x5909;&#x66F4;</p><pre><code>chown -R tomcat. /home/tomcat/bin/apache-tomcat-8.5.4
 chown -R tomcat. /home/tomcat/bin/jdk1.8.0_101</code></pre>
 </li>
-<li><p>&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306E;&#x5B9A;&#x7FA9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4F5C;&#x6210; &#xFF08;CentOS7&#x7279;&#x6709;&#xFF09;</p><pre><code>vi /etc/systemd/system/tomcat.service</code></pre>
-</li></ol>
-<p>tomcat.service&#x5185;&#x5BB9;
-```
-[Unit]
+<li><p>&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306E;&#x5B9A;&#x7FA9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4F5C;&#x6210; &#xFF08;CentOS7&#x7279;&#x6709;&#xFF09;</p></li></ol>
+<pre><code>vi /etc/systemd/system/tomcat.service</code></pre>
+<p>tomcat.service&#x5185;&#x5BB9;</p><pre><code>[Unit]
 Description=Apache Tomcat 8.5 for tomcat
-After=network.target</p></li></ol>
-<p>[Service]
+After=network.target
+
+[Service]
 User=tomcat
 Group=tomcat
 Type=oneshot
 PIDFile=/home/tomcat/bin/apache-tomcat-8.5.4/tomcat.pid
-RemainAfterExit=yes</p><p>EnvironmentFile=/etc/sysconfig/tomcat
+RemainAfterExit=yes
+
+EnvironmentFile=/etc/sysconfig/tomcat
 ExecStart=/home/tomcat/bin/apache-tomcat-8.5.4/bin/startup.sh
 ExecStop=/home/tomcat/bin/apache-tomcat-8.5.4/bin/shutdown.sh
-ExecReStart=/home/tomcat/bin/apache-tomcat-8.5.4/bin/shutdown.sh;/home/tomcat/bin/apache-tomcat-8.5.4/bin/startup.sh</p><p>[Install]
-WantedBy=multi-user.target</p><pre><code>1. Java&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4F5C;&#x6210; &#xFF08;CentOS7&#x7279;&#x6709;&#xFF09;</code></pre>
-<p>vi /etc/sysconfig/tomcat</p><pre><code>&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x5185;&#x5BB9;</code></pre>
-<p>JAVA_HOME=&quot;/home/tomcat/bin/jdk1.8.0_101/&quot;
-JAVA_OPTS=&quot;-Djava.security.egd=file:/dev/./urandom&quot;</p><pre><code>1. &#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306E;&#x5B9A;&#x7FA9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x6A29;&#x9650;&#x5909;&#x66F4;</code></pre>
-<p>chmod 755 /etc/systemd/system/tomcat.service</p><pre><code>1. &#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x8D77;&#x52D5;</code></pre>
-<p>systemctl start tomcat
+ExecReStart=/home/tomcat/bin/apache-tomcat-8.5.4/bin/shutdown.sh;/home/tomcat/bin/apache-tomcat-8.5.4/bin/startup.sh
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+<ol><li>Java&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4F5C;&#x6210; &#xFF08;CentOS7&#x7279;&#x6709;&#xFF09;
+<pre><code>vi /etc/sysconfig/tomcat</code></pre>
+</li></ol>
+<p>&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x5185;&#x5BB9;</p><pre><code>JAVA_HOME=&quot;/home/tomcat/bin/jdk1.8.0_101/&quot;
+JAVA_OPTS=&quot;-Djava.security.egd=file:/dev/./urandom&quot;</code></pre>
+<ol><li><p>&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306E;&#x5B9A;&#x7FA9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x6A29;&#x9650;&#x5909;&#x66F4;</p><pre><code>chmod 755 /etc/systemd/system/tomcat.service</code></pre>
+</li>
+<li><p>&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x8D77;&#x52D5;</p><pre><code>systemctl start tomcat
 systemctl enable tomcat
 systemctl stop tomcat
-systemctl disable tomcat
-```
-1. &#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x8D77;&#x52D5;&#x3092;&#x78BA;&#x8A8D;
-<a href="http://XXX.XXX.XXX.XXX:8080/" target="_blank">http://XXX.XXX.XXX.XXX:8080/</a></p></li></ol>
+systemctl disable tomcat</code></pre>
+<ol><li>&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x8D77;&#x52D5;&#x3092;&#x78BA;&#x8A8D;
+</li></ol>
+<p><a href="http://XXX.XXX.XXX.XXX:8080/" target="_blank">http://XXX.XXX.XXX.XXX:8080/</a></p></li></ol>
+</li></ol>
 
                                 
                                 </section>
@@ -337,7 +345,7 @@ systemctl disable tomcat
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tomcat","level":"1.6","depth":1,"previous":{"title":"gitbook","level":"1.5","depth":1,"path":"gitbook/docs/gitbook.md","ref":"gitbook/docs/gitbook.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook/Tomcat/Tomcat.md","mtime":"2016-08-26T08:58:46.790Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-26T09:00:11.686Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tomcat","level":"1.6","depth":1,"previous":{"title":"gitbook","level":"1.5","depth":1,"path":"gitbook/docs/gitbook.md","ref":"gitbook/docs/gitbook.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook/Tomcat/Tomcat.md","mtime":"2016-08-29T01:09:10.780Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-29T01:10:25.964Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -345,10 +353,6 @@ systemctl disable tomcat
         
     <script src="../gitbook.js"></script>
     <script src="../theme.js"></script>
-    
-        
-        <script src="../gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook-plugin-search/search-engine.js"></script>

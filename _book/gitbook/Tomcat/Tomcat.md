@@ -3,15 +3,17 @@
 ### CentOS7のTomcatインストール
 
   1. グループ、ユーザ作成
+  groupadd tomcat
+  ```
+  useradd -g tomcat -d /home/tomcat -s /bin/bash tomcat
+  ```
 
-          groupadd tomcat
-          useradd -g tomcat -d /home/tomcat -s /bin/bash tomcat
+  1. ファイル転送
+  ```
+  ・ jdk (例：jdk-8u71-linux-x64.tar.gz)
 
-  1. ファイル転送  
-
-    jdk (例：jdk-8u71-linux-x64.tar.gz)
-
-    apache-tomcat (例：apache-tomcat-8.0.30.tar.gz)
+  ・ apache-tomcat (例：apache-tomcat-8.0.30.tar.gz)
+  ```
   1. 解凍先フォルダ作成  
   ```
   cd /home/tomcat

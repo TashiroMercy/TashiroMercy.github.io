@@ -255,14 +255,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="tomcat&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">Tomcat&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h1><hr><h3 id="centos7&#x306E;tomcat&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">CentOS7&#x306E;Tomcat&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h3><ol><li><p>&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x3001;&#x30E6;&#x30FC;&#x30B6;&#x4F5C;&#x6210;</p><pre><code> groupadd tomcat
- useradd -g tomcat -d /home/tomcat -s /bin/bash tomcat</code></pre>
+                                <h1 id="tomcat&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">Tomcat&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h1><hr><h3 id="centos7&#x306E;tomcat&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">CentOS7&#x306E;Tomcat&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h3><ol><li><p>&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x3001;&#x30E6;&#x30FC;&#x30B6;&#x4F5C;&#x6210;
+groupadd tomcat</p><pre><code>useradd -g tomcat -d /home/tomcat -s /bin/bash tomcat</code></pre>
 <ol><li>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x8EE2;&#x9001;
 </li></ol>
-<p>jdk (&#x4F8B;&#xFF1A;jdk-8u71-linux-x64.tar.gz)</p><p>apache-tomcat (&#x4F8B;&#xFF1A;apache-tomcat-8.0.30.tar.gz)</p></li>
-<li><p>&#x89E3;&#x51CD;&#x5148;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x4F5C;&#x6210;</p><pre><code>cd /home/tomcat
+<pre><code>&#x30FB; jdk (&#x4F8B;&#xFF1A;jdk-8u71-linux-x64.tar.gz)
+
+&#x30FB; apache-tomcat (&#x4F8B;&#xFF1A;apache-tomcat-8.0.30.tar.gz)</code></pre>
+<ol><li><p>&#x89E3;&#x51CD;&#x5148;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x4F5C;&#x6210;</p><pre><code>cd /home/tomcat
 mkdir bin</code></pre>
-<ol><li><p>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x79FB;&#x52D5;</p><pre><code>cp /home/vagrant/jdk-8u101-linux-x64.tar.gz  /home/tomcat/
+</li>
+<li><p>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x79FB;&#x52D5;</p><pre><code>cp /home/vagrant/jdk-8u101-linux-x64.tar.gz  /home/tomcat/
 cp /home/vagrant/apache-tomcat-8.5.4.tar.gz /home/tomcat/</code></pre>
 </li>
 <li><p>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x89E3;&#x51CD;</p><pre><code>tar zxf /home/tomcat/apache-tomcat-8.5.4.tar.gz -C /home/tomcat/bin
@@ -345,7 +348,7 @@ systemctl disable tomcat</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tomcat","level":"1.6","depth":1,"previous":{"title":"gitbook","level":"1.5","depth":1,"path":"gitbook/docs/gitbook.md","ref":"gitbook/docs/gitbook.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook/Tomcat/Tomcat.md","mtime":"2016-08-29T01:09:10.780Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-29T01:10:25.964Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tomcat","level":"1.6","depth":1,"previous":{"title":"gitbook","level":"1.5","depth":1,"path":"gitbook/docs/gitbook.md","ref":"gitbook/docs/gitbook.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gitbook/Tomcat/Tomcat.md","mtime":"2016-08-29T01:19:02.497Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-29T01:19:06.905Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -353,6 +356,10 @@ systemctl disable tomcat</code></pre>
         
     <script src="../gitbook.js"></script>
     <script src="../theme.js"></script>
+    
+        
+        <script src="../gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook-plugin-search/search-engine.js"></script>

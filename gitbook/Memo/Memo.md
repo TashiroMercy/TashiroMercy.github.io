@@ -11,6 +11,8 @@
 
 * Heroku関連
 
+  http://developers.mobage.jp/blog/how-to-use-for-beginners-heroku
+
   http://springboottemplate.herokuapp.com/
 
   heroku login

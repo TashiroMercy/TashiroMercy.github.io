@@ -12,3 +12,9 @@
 * Heroku関連
 
   http://springboottemplate.herokuapp.com/
+
+  heroku login
+  
+  heroku plugins:install https://github.com/heroku/heroku-deploy
+  
+  heroku deploy:war --war template.war --app springboothsomishive

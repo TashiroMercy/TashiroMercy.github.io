@@ -19,8 +19,7 @@
   
   heroku plugins:install https://github.com/heroku/heroku-deploy
   
-  // デプロイ用
+  heroku apps:create tashiro-mercy
   
-  heroku plugins:install heroku-cli-deploy
-  
-  heroku deploy:war --war template.war --app springboothsomishive
+  heroku deploy:war --war mercy.war --app tashiro-mercy
+

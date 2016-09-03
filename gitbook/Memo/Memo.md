@@ -19,4 +19,8 @@
   
   heroku plugins:install https://github.com/heroku/heroku-deploy
   
+  // デプロイ用
+  
+  heroku plugins:install heroku-cli-deploy
+  
   heroku deploy:war --war template.war --app springboothsomishive

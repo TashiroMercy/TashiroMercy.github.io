@@ -23,3 +23,4 @@
   
   heroku deploy:war --war mercy.war --app tashiro-mercy
 
+  https://tashiro-mercy.herokuapp.com/

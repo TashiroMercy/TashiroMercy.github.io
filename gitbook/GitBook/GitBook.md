@@ -19,10 +19,7 @@ markdownで書いたドキュメントをhtmlやpdfなどで読みやすい形�
 ### GitBookコマンド
 1. gitbook init
 
-　　以下の雛形ファイルが生成される。
-　
-  * README.md
-  * SUMMARY.md
+   雛形ファイルが生成される。<Br>
 
 2. gitbook build
 

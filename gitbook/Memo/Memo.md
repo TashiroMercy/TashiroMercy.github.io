@@ -16,11 +16,14 @@
   http://springboottemplate.herokuapp.com/
 
   heroku login
-  
+
   heroku plugins:install https://github.com/heroku/heroku-deploy
-  
+
   heroku apps:create tashiro-mercy
-  
+
   heroku deploy:war --war mercy.war --app tashiro-mercy
 
   https://tashiro-mercy.herokuapp.com/
+
+  * エクセル参照設定
+   ![01](../image/Memo/01.png)<br>

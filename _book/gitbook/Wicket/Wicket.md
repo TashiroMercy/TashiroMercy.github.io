@@ -17,7 +17,7 @@ Apache Software Foundationが提供するWebアプリケーション開発フレ
 
 2. Mavenコマンド実行<br>
 
-   コピーしたコマンドを実行する。
+   コピーしたコマンドを実行する。<br>
    ![02](../image/Wicket/02.png)<br>
 
    コマンド実行後<br>

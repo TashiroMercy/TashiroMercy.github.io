@@ -23,13 +23,13 @@ markdownで書いたドキュメントをhtmlやpdfなどで読みやすい形�
 
 2. gitbook build
 
-   MarkDownで記述したファイルがビルドされる。
+   MarkDownで記述したファイルがビルドされる。<Br>
    ![01](../image/GitBook/01.png)
 
 3. gitbook serve
 
-    ローカルサーバーが立ち上がります。
+    ローカルサーバーが立ち上がります。<Br>
     ![02](../image/GitBook/02.png)
 
-    `http://localhost:4000`にて確認可能。    
+    `http://localhost:4000`にて確認可能。<Br>
     ![03](../image/GitBook/03.png)

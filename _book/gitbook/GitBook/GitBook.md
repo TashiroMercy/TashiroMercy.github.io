@@ -17,14 +17,13 @@ markdownで書いたドキュメントをhtmlやpdfなどで読みやすい形�
     ```
 ****
 ### GitBookコマンド
-<<<<<<< HEAD
-1. 雛形ファイル生成   
+1. 雛形ファイル生成<BR>   
 雛形ファイルが生成される。
 ```MarkDown
 gitbook init
 ```  
 　  
-2. ビルド   
+2. ビルド<BR>   
 MarkDownで記述したファイルがビルドされる。
 ```MarkDown
 gitbook build
@@ -35,10 +34,10 @@ gitbook build
 ```MarkDown
 gitbook serve
 ```
-![01](../image/GitBook/01.png)
-<BR>`http://localhost:4000`にて確認可能。    
+![01](../image/GitBook/01.png)   
+`http://localhost:4000`にて確認可能。    
 ![03](../image/GitBook/03.png)
-
+　  
 4. PDF出力   
 PDFファイルが生成される。   
 ※calibreをインストールする必要があります。
@@ -46,21 +45,3 @@ PDFファイルが生成される。
 gitbook pdf
 ```   
 ![04](../image/GitBook/04.png)
-=======
-1. gitbook init
-
-   雛形ファイルが生成される。<Br>
-
-2. gitbook build
-
-   MarkDownで記述したファイルがビルドされる。<Br>
-   ![01](../image/GitBook/01.png)
-
-3. gitbook serve
-
-    ローカルサーバーが立ち上がります。<Br>
-    ![02](../image/GitBook/02.png)
-
-    `http://localhost:4000`にて確認可能。<Br>
-    ![03](../image/GitBook/03.png)
->>>>>>> 45a2832cf83cf2e032e2c7793519fdd7f9cee609

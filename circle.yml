@@ -1,0 +1,33 @@
+machine:
+  timezone: Asia/Tokyo
+  post:
+    - sudo service mysql stop
+    - sudo service postgresql stop
+
+general:
+  artifacts:
+    - "_book"
+
+dependencies:
+  pre:
+    - npm install -g gitbook-cli
+
+deployment:
+  deploy:
+    branch: master
+    commands:
+      - gitbook build
+      - git config --global user.email tashi69akamercy@gmail.com
+      - git config --global user.name TashiroMercy
+      - git add --all :/
+      - git commit ./_book/* -m "build [ci skip]"
+      - git pull git@github.com:TashiroMercy/Report.git master
+      - git push git@github.com:TashiroMercy/Report.git master
+
+test:
+  pre:
+    - echo "-----start test-----"
+  override:
+    - echo "-----no test-----"
+  post:
+    - echo "-----end test-----"

@@ -10,4 +10,4 @@
 
 ### [GitBook](docs/GitBook/GitBook.md)
 
-### [Wiket](docs/Wicket/Wicket.md)
+### [Wicket](docs/Wicket/Wicket.md)
